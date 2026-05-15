@@ -108,3 +108,19 @@ class LoanResponse(ORMBase):
     return_date: Optional[date]
     member: LoanMemberInfo
     book: LoanBookInfo
+
+# Reports
+class TopBorrowerResponse(BaseModel):
+    id: int
+    full_name: str
+    email: str
+    join_date: date
+    is_active: bool
+    total_loans: int
+
+class OverdueLoanResponse(BaseModel):
+    id: int
+    member_name: str
+    book_title: str
+    due_date: date
+    days_overdue: int
