@@ -19,7 +19,7 @@ class Member(Base):
     id = Column(Integer, primary_key=True, index = True)
     full_name = Column(String, nullable=False)
     email = Column(String,unique=True, index=True, nullable=False)
-    jopin_date = Column(Date, nullable=False)
+    join_date = Column(Date, nullable=False)
     is_active = Column(Boolean, default=True, nullable=False)
 
     loans = relationship("Loan", back_populates="member")
