@@ -84,3 +84,27 @@ class PaginatedResponse(BaseModel, Generic[T]):
     page_size: int
     total: int
     total_pages: int
+
+# Loan
+class LoanMemberInfo(ORMBase):
+    id: int
+    full_name: str
+
+class LoanBookInfo(ORMBase):
+    id: int
+    title: str
+
+class LoanCreate(BaseModel):
+    member_id: int
+    book_id: int
+    due_date: date
+
+class LoanResponse(ORMBase):
+    id: int
+    member_id: int
+    book_id: int
+    loan_date: date
+    due_date: date
+    return_date: Optional[date]
+    member: LoanMemberInfo
+    book: LoanBookInfo

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import books, members, authors, categories
+from app.routers import books, members, authors, categories, loans
 
 app = FastAPI(
     title="Library Lending API",
@@ -11,6 +11,7 @@ app.include_router(books.router, prefix="/api/v1")
 app.include_router(members.router, prefix="/api/v1")
 app.include_router(authors.router, prefix="/api/v1")
 app.include_router(categories.router, prefix="/api/v1")
+app.include_router(loans.router, prefix="/api/v1")
 
 @app.get("/api/v1/health")
 def health_chack():
