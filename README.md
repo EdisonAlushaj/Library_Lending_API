@@ -14,7 +14,7 @@ A RESTful backend API for a small library lending system, built with FastAPI and
 ### 1. Clone the repository and create a virtual environment
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/EdisonAlushaj/Library_Lending_API.git>
 cd Library_Lending_API
 python -m venv venv
 ```
